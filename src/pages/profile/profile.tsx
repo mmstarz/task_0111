@@ -24,10 +24,11 @@ const Profile: React.FC<ProfileProps> = (): React.ReactElement => {
   }, [dispatch, username]);
 
   useEffect((): void => {
-    if (Object.keys(data).length === 0) {
-      getData();
-    }
-  }, [getData, data]);
+    // if (Object.keys(data).length === 0) {
+    //   getData();
+    // }
+    getData();
+  }, [getData]);
 
   const isData = useMemo(() => {
     return !isLoading && !isError && Object.keys(data).length > 0;
