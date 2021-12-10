@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* COMMON LAYOUT */
+.header {
+  text-align: center;
+  font-size: x-large;
+  background: aliceblue;
+  margin-bottom: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    display: inline-flex;
+  }
+}
+
+/* PAGES */
+.landing {
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  filter: drop-shadow(0px 0px 4px black);
+  background: #263238;
+  border-radius: 4px;
+
+  .content {
+    color: white;
+    margin-bottom: 24px;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .redirect {
+    a {
+      color: white;
+    }
+  }
+}
+
+/* COMPONENTS */
+.users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 0;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 8px;
+    background: aliceblue;
+    padding-right: 8px;
+    filter: drop-shadow(0px 0px 2px black);
+    border-radius: 4px;
+    cursor: pointer;
+
+    .avatar {
+      width: 56px;
+      height: 56px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px 0px 0px 4px;
+      }
+    }
+  }
+}
+
+.search {
+  margin: 8px auto;
+  text-align: center;
+
+  #search_input {
+    padding: 16px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    outline: none;
+  }
+
+  #search_input:focus {
+    border-bottom: 1px solid black;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 434px;
+  margin: 0 auto;
+
+  .top_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    filter: drop-shadow(0px 0px 4px black);
+    background: darkcyan;
+    border-radius: 4px;
+
+    .avatar {
+      width: 242px;
+      height: 242px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px 0px 0px 4px;
+      }
+    }
+
+    .info {
+      padding: 16px;
+
+      p {
+        margin: 12px 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 160px;
+        white-space: nowrap;
+        color: white;
+      }
+    }
+  }
+
+  .bottom_section {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+.reposWrapper {
+  width: 434px;
+  margin: 0 auto;
+
+  .repos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .repo_item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      background: aliceblue;
+      padding: 8px 16px;
+      filter: drop-shadow(0px 0px 2px black);
+      border-radius: 4px;
+    }
+  }
+}
